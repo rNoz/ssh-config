@@ -46,13 +46,13 @@ HELP
 end
 
 case command
-when 'help'
+when /(?:-\?|-h|(?:--)?help)/
   puts usage
-when 'list'
+when 'list', 'ls'
   puts config.list
 when 'show'
   puts config.show(*argv)
-when 'search'
+when /(?:search|find)/
   search = argv.shift
   result = config.search(search).gsub(search, "\033[43m#{search}\033[0m")
   puts result unless result.empty?

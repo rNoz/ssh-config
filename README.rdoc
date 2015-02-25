@@ -87,3 +87,30 @@ name on the Host line), and removes any <alias>es from the list of
 alternate names.  With only 1 argument, looks for an entry by that
 alias (must NOT be the first name on the Host line), and removes the
 alias from the entry, if found.
+
+
+== Modifications by rNoz
+
+Just really tiny features over the project from _dbrady_.
+
+=== new aliases
+
+- listing _Hosts_:
+    ls, list
+
+- searching _Hosts_, _Keys_ or _Values_:
+    search, find
+
+- showing the help:
+    -?, -h, --help, help
+
+=== PKGBUILD for AUR/Arch packages
+
+Located under +builder/arch+, providing the package builder for AUR (https://aur.archlinux.org/) and Pacman packages.
+
+
+== Original project
+
+Original code (almost everything) from _dbrady_ (https://github.com/dbrady/ssh-config).
+
+The +-?+ and +-h+ idea was suggested from the PR of _epower_ (https://github.com/epower/ssh-config), but because the merging process was/is slow, this repo is created.

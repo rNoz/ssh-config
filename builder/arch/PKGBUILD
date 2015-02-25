@@ -1,0 +1,34 @@
+# $Id: pkgbuild-mode.el,v 1.23 2007/10/20 16:02:14 juergen Exp $
+# Maintainer:  <rad6@station.business>
+pkgname=ssh-config
+pkgver=0.1.3r
+pkgrel=1
+epoch=
+pkgdesc="A Tool for Managing ssh Config Files (rNoz forked version)"
+arch=('i686' 'x86_64')
+# Original: https://github.com/dbrady/ssh-config
+url="https://github.com/rNoz/ssh-config"
+license=('MIT')
+depends=(ruby)
+makedepends=(git)
+provides=()
+conflicts=()
+
+_gitroot='https://github.com/rNoz/ssh-config.git'
+_buildname="${pkgname}-${pkgver}"
+
+prepare() {
+  [ -e "${srcdir}/${_buildname}" ] && rm -rf "${srcdir}/${_buildname}"
+  cd "${srcdir}"
+  msg "Connecting to GIT server...."
+  git clone "${_gitroot}" "${_buildname}"
+  msg "GIT checkout done or server timeout"
+}
+
+package() {
+  cd "${srcdir}/${_buildname}"
+  mkdir -p "${pkgdir}"/usr/{bin,lib}
+  cp lib/* "${pkgdir}"/usr/lib/
+  cp bin/* "${pkgdir}"/usr/bin/
+  chmod 755 "${pkgdir}"/usr/bin/*
+}
