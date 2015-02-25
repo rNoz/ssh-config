@@ -1,4 +1,4 @@
-# Maintainer:  <rNoz rnoz.commits@gmail.com>
+# Maintainer: rNoz <rnoz.commits@gmail.com>
 pkgname=ssh-config
 pkgver=0.1.3r
 pkgrel=1
