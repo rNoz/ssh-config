@@ -106,8 +106,8 @@ Just really tiny features over the project from _dbrady_.
 
 === PKGBUILD for AUR/Arch packages
 
-Located under +builder/arch+, providing the package builder for AUR (https://aur.archlinux.org/) and Pacman packages.
-
+Located under +builder/arch+, providing the package builder for _AUR_ (https://aur.archlinux.org/) and _Pacman_ packages.
+Recently uploaded to _AUR_ in https://aur.archlinux.org/packages/ssh-config/ (+packer -S ssh-config+, +yaourt ssh-config+).
 
 == Original project
 
